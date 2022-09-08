@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+<title>SPORTFIELD</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+    html,
+    body,
+    p,
+    h1 {
+        font-family: 'Roboto Mono', monospace;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0;
+    }
+
+    .background-image {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("images/background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .background-image-greyed {
+        position: relative;
+    }
+
+    .opacity-layer {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    .logo {
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .container-description {
+        font-weight: 100;
+    }
+
+    .container-description>p {
+        width: 500px;
+        margin: auto;
+    }
+
+    .container-description b {
+        font-weight: bold;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        font-size: 13px;
+    }
+
+    .footer>div {
+        flex: 1;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .contact>a>img {
+        width: 38px;
+    }
+
+    .contact>a:last-child>img {
+        margin-right: 10px;
+    }
+
+    @media only screen and (max-width : 640px) {
+        body {
+            margin: 0 40px;
+        }
+
+        .background-image {
+            background-image: url("images/background-mobile.jpg");
+        }
+
+        .container {
+            align-items: flex-start;
+        }
+
+        .container>h1,
+        .container>.logo {
+            margin-top: 120px;
+        }
+
+        .container-description>p {
+            font-size: 16px;
+        }
+
+        .footer {
+            flex-direction: column-reverse;
+            font-size: 11px;
+        }
+
+        .contact {
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .addresses {
+            margin: auto;
+        }
+    }
+</style>
+<script src=""></script>
+
+<body>
+
+    <div class="background">
+        <div class="background-image"></div>
+        <div class="background-image-greyed">
+            <div class="background-image"></div>
+            <div class="opacity-layer"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <h1>SPORTFIELD</h1>
+    </div>
+
+    <div class="container container-description">
+        <p>
+            <b>SPORTFIELD</b> est une solution d’équipement sportifs agiles qui s’adaptent aux disponibilités foncières
+            pour apporter le sport au cœur des villes
+        </p>
+
+        <div class="footer">
+            <div></div>
+            <div class="addresses">
+                <p><b>SIEGE</b> - 62 RUE DES PRAIRIES 75020 PARIS</p>
+                <p><b>URBAN'LAB</b> - 62 RUE RENE BOULANGER 75018 PARIS</p>
+            </div>
+            <div class="contact">
+                jmaleyrat@gmail.com
+                <a href="mailTo:jmaleyrat@gmail.com"><img src="icons/mail.svg" alt="mail logo" /></a>
+                <a target="_blank" href="https://www.instagram.com"><img src="icons/insta.svg" alt="mail logo" /></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
