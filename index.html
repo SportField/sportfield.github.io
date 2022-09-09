@@ -21,7 +21,7 @@
     }
 
     .background {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         font-size: 0;
@@ -36,17 +36,14 @@
         background-size: cover;
     }
 
-    .background-image-greyed {
-        position: relative;
-    }
-
     .opacity-layer {
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: #000;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0;
     }
 
     .container {
@@ -120,6 +117,14 @@
             margin-top: 120px;
         }
 
+        h1 {
+            font-size: 36px;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
         .container-description>p {
             font-size: 16px;
         }
@@ -139,16 +144,19 @@
         }
     }
 </style>
-<script src=""></script>
+<script>
+    window.addEventListener('scroll', (event) => {
+        const clientHeight = document.scrollingElement.clientHeight;
+        const opacity = document.scrollingElement.scrollTop / clientHeight;
+        document.getElementsByClassName("opacity-layer")[0].style.opacity = opacity / 1.4;
+    });
+</script>
 
 <body>
 
     <div class="background">
         <div class="background-image"></div>
-        <div class="background-image-greyed">
-            <div class="background-image"></div>
-            <div class="opacity-layer"></div>
-        </div>
+        <div class="opacity-layer"></div>
     </div>
 
     <div class="container">
